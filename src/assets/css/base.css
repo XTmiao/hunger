@@ -1,0 +1,26 @@
+/*
+* @Author: Marte
+* @Date:   2018-04-10 16:55:10
+* @Last Modified by:   Marte
+* @Last Modified time: 2018-04-13 14:09:34
+*/
+
+//设置不同dip设备显示的1px的边框
+
+body,html{
+    font-weight: 200;
+    font-size: 12px;
+    line-height: 1;
+    font-family: 'PingFang SC', 'STHeitiSC-Light', 'Helvetica-Light', arial, sans-serif;
+}
+
+.clearfix{display: inline-block;}
+.clearfix:after{display: block; content: ' '; height: 0; line-height: 0; clear: both; visibility: hidden;}
+
+@media (min-device-pixel-ratio: 1.5),(-Webkit-min-device-pixel-ratio: 1.5){
+   .border-1px::after{transform: scaleY(0.7); -webkit-transform: scaleY(0.7)}
+}
+@media (min-device-pixel-ratio: 2),(-Webkit-min-device-pixel-ratio: 2){
+   .border-1px::after{transform: scaleY(0.5); -webkit-transform: scaleY(0.5)}
+}
+
